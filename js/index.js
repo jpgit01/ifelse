@@ -1,0 +1,1 @@
+const colorFondo = document.body.style.backgroundColor = 'LightGoldenrodYellow';
