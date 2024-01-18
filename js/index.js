@@ -37,12 +37,15 @@ function bordeRojo() {
     let tres= document.getElementById("tres").value;
     let total = parseInt(uno) + parseInt(dos)  + parseInt(tres);
 
-    if (total <= 10){
+    if (uno == 9 && dos == 1 && tres == 1){
         
         document.getElementById("alertpassword").className ="alert alert-success"
-        document.getElementById("alertpassword").innerHTML = "Llevas " + total + " Stickers"
-    } else{
-        document.getElementById("alert").className ="alert alert-danger"
-        document.getElementById("alert").innerHTML = "Llevas demasiados Stickers"
+        document.getElementById("alertpassword").innerHTML = "<p>password <b>1</b> correcto</p>"
+    } else if(uno == 7 && dos == 1 && tres == 4){
+        document.getElementById("alertpassword").className ="alert alert-success"
+        document.getElementById("alertpassword").innerHTML = "<p>password <b>2</b> correcto</p>"
+    }else{
+        document.getElementById("alertpassword").className ="alert alert-danger"
+        document.getElementById("alertpassword").innerHTML = "password incorrecto"
     }
   }
