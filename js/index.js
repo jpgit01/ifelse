@@ -29,3 +29,20 @@ function bordeRojo() {
         document.getElementById("alert").innerHTML = "Llevas demasiados Stickers"
     }
   }
+
+  function password(){
+
+    let uno= document.getElementById("uno").value;
+    let dos= document.getElementById("dos").value;
+    let tres= document.getElementById("tres").value;
+    let total = parseInt(uno) + parseInt(dos)  + parseInt(tres);
+
+    if (total <= 10){
+        
+        document.getElementById("alertpassword").className ="alert alert-success"
+        document.getElementById("alertpassword").innerHTML = "Llevas " + total + " Stickers"
+    } else{
+        document.getElementById("alert").className ="alert alert-danger"
+        document.getElementById("alert").innerHTML = "Llevas demasiados Stickers"
+    }
+  }
