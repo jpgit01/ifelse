@@ -20,13 +20,15 @@ function bordeRojo() {
     let github= document.getElementById("github").value;
     let total = parseInt(git) + parseInt(slack)  + parseInt(github);
 
+    let alert = document.getElementById("alert");
+
     if (total <= 10){
         
-        document.getElementById("alert").className ="alert alert-success"
-        document.getElementById("alert").innerHTML = "Llevas " + total + " Stickers"
+        alert.className ="alert alert-success"
+        alert.innerHTML = "Llevas " + total + " Stickers"
     } else{
-        document.getElementById("alert").className ="alert alert-danger"
-        document.getElementById("alert").innerHTML = "Llevas demasiados Stickers"
+        alert.className ="alert alert-danger"
+        alert.innerHTML = "Llevas demasiados Stickers"
     }
   }
 
@@ -36,15 +38,17 @@ function bordeRojo() {
     let dos= document.getElementById("dos").value;
     let tres= document.getElementById("tres").value;
 
+    let alert = document.getElementById("alertpassword");
+
     if (uno == 9 && dos == 1 && tres == 1){
         
-        document.getElementById("alertpassword").className ="alert alert-success"
-        document.getElementById("alertpassword").innerHTML = "<p>password <b>1</b> correcto</p>"
+        alert.className ="alert alert-success"
+        alert.innerHTML = "<p>password <b>1</b> correcto</p>"
     } else if(uno == 7 && dos == 1 && tres == 4){
-        document.getElementById("alertpassword").className ="alert alert-success"
-        document.getElementById("alertpassword").innerHTML = "<p>password <b>2</b> correcto</p>"
+        alert.className ="alert alert-success"
+        alert.innerHTML = "<p>password <b>2</b> correcto</p>"
     }else{
-        document.getElementById("alertpassword").className ="alert alert-danger"
-        document.getElementById("alertpassword").innerHTML = "password incorrecto"
+        alert.className ="alert alert-danger"
+        alert.innerHTML = "password incorrecto"
     }
   }
