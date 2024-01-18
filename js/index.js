@@ -16,5 +16,13 @@ function bordeRojo() {
   let git= document.getElementById("git").value;
   let slack= document.getElementById("slack").value;
   let github= document.getElementById("github").value;
-  document.getElementById("alert").innerHTML='Párrafo de texto';
   
+  
+  function calcular(){
+    let total = git + slack + github;
+
+    if (total <= 10){
+        document.getElementById("alert").className ="alert alert-success"
+        document.getElementById("alert").innerHTML = "Llevas tantos cupones"
+    }
+  }
