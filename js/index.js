@@ -12,3 +12,9 @@ function bordeRojo() {
         bandera = 0;
     }
   }
+
+  let git= document.getElementById("git").value;
+  let slack= document.getElementById("slack").value;
+  let github= document.getElementById("github").value;
+  document.getElementById("alert").innerHTML='Párrafo de texto';
+  
