@@ -13,16 +13,19 @@ function bordeRojo() {
     }
   }
 
-  let git= document.getElementById("git").value;
-  let slack= document.getElementById("slack").value;
-  let github= document.getElementById("github").value;
-  
-  
   function calcular(){
-    let total = git + slack + github;
+
+    let git= document.getElementById("git").value;
+    let slack= document.getElementById("slack").value;
+    let github= document.getElementById("github").value;
+    let total = parseInt(git) + parseInt(slack)  + parseInt(github);
 
     if (total <= 10){
+        
         document.getElementById("alert").className ="alert alert-success"
-        document.getElementById("alert").innerHTML = "Llevas tantos cupones"
+        document.getElementById("alert").innerHTML = "Llevas " + total + " Stickers"
+    } else{
+        document.getElementById("alert").className ="alert alert-danger"
+        document.getElementById("alert").innerHTML = "Llevas demasiados Stickers"
     }
   }
