@@ -11,7 +11,4 @@ function bordeRojo() {
         className = " img-fluid";
         bandera = 0;
     }
-
-    
- 
   }
