@@ -35,7 +35,6 @@ function bordeRojo() {
     let uno= document.getElementById("uno").value;
     let dos= document.getElementById("dos").value;
     let tres= document.getElementById("tres").value;
-    let total = parseInt(uno) + parseInt(dos)  + parseInt(tres);
 
     if (uno == 9 && dos == 1 && tres == 1){
         
