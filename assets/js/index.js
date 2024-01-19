@@ -27,6 +27,7 @@ function bordeRojo() {
 
     let total = parseInt(git) + parseInt(slack)  + parseInt(github);
     totalNumero = Number(total);
+    console.log(totalNumero);
     let alert = document.getElementById("alert");
 
     if (totalNumero <= 10 && totalNumero > 0){
@@ -36,9 +37,6 @@ function bordeRojo() {
     }else if(totalNumero > 10){
         alert.className ="alert alert-danger"
         alert.innerHTML = "Llevas demasiados Stickers ("+ totalNumero + ")"
-    } else{
-        alert.className ="alert alert-warning"
-        alert.innerHTML = "Ingresa una cantidad correcta de Stickers"       
     }
   }
 
