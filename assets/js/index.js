@@ -1,16 +1,20 @@
+//ejercicio 1 imagen
 bandera = 0;
 function bordeRojo() {
+    const elemento = document.getElementById("uno");
     if (bandera == 0){
-        document.getElementById("uno").
+        elemento.
         className = "borderojo img-fluid";
         bandera = 1
     }else if(bandera == 1){
-        document.getElementById("uno").
+        elemento.
         className = " img-fluid";
         bandera = 0;
     }
   }
+////////////////////////////////////////////////////////////////////////////////
 
+//ejercicio 2 cupones
   function calcular(){
 
     let git= document.getElementById("git").value;
@@ -33,6 +37,7 @@ function bordeRojo() {
                 alert2.className ="alert alert-warning";
                 alert2.innerHTML = "Tienes numeros negativos, corrígelos por favor";
             }, 500);
+
             }else if(parseInt(github) < 0){
                 github = 0
                 setTimeout(function(){
@@ -62,7 +67,6 @@ function bordeRojo() {
                   
     let total = git + slack  + github;
     totalNumero = Number(total);
-    console.log(totalNumero)
 
     if (totalNumero <= 10 && totalNumero >= 0){
         
@@ -81,18 +85,19 @@ function bordeRojo() {
             githubdato = "ninguno";
         } 
 
-
         alert.innerHTML = "Llevas " + total + " Stickers en total, " + gitdato +" de Git, " + slackdato + " de Slack y " + githubdato  + " de Github"
         alert2.className ="";
         alert2.innerHTML = "";
     }else if(totalNumero > 10){
         alert.className ="alert alert-danger"
-        alert.innerHTML = "Llevas demasiados Stickers ("+ totalNumero + ") en total, muchos"
+        alert.innerHTML = "Llevas demasiados Stickers ("+ totalNumero + ") en total, muchos..."
         alert2.className ="";
         alert2.innerHTML = "";
     }
   }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+//ejercicio 3 pasword
   function password(){
 
     let uno= document.getElementById("uno").value;
