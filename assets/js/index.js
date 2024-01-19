@@ -41,19 +41,53 @@ function bordeRojo() {
                 }, 500);
                 }
 
-    let total = parseInt(git) + parseInt(slack)  + parseInt(github);
-    totalNumero = Number(total);
-    
 
-    if (totalNumero <= 10 && totalNumero > 0){
+                if( Math.sign(parseInt(git)) === 1 ) {
+                    git = parseInt(git)
+                  }else{
+                    git = 0
+                  }
+
+                  if( Math.sign(parseInt(slack)) === 1 ) {
+                    slack = parseInt(slack)
+                  }else{
+                    slack = 0
+                  }
+
+                  if( Math.sign(parseInt(github)) === 1 ) {
+                    github = parseInt(github)
+                  }else{
+                    github = 0
+                  }
+                  
+    let total = git + slack  + github;
+    totalNumero = Number(total);
+    console.log(totalNumero)
+
+    if (totalNumero <= 10 && totalNumero >= 0){
         
         alert.className ="alert alert-success"
-        alert.innerHTML = "Llevas " + total + " Stickers en total"
+        let gitdato = parseInt(git);
+        let slackdato = parseInt(slack);
+        let githubdato = parseInt(github);
+
+        if(git <= 0){
+            gitdato = "ninguno";
+        } 
+        if(slack <= 0){
+            slackdato= "ninguno";
+        } 
+        if(github <= 0){
+            githubdato = "ninguno";
+        } 
+
+
+        alert.innerHTML = "Llevas " + total + " Stickers en total, " + gitdato +" de Git, " + slackdato + " de Slack y " + githubdato  + " de Github"
         alert2.className ="";
         alert2.innerHTML = "";
     }else if(totalNumero > 10){
         alert.className ="alert alert-danger"
-        alert.innerHTML = "Llevas demasiados Stickers ("+ totalNumero + ")"
+        alert.innerHTML = "Llevas demasiados Stickers ("+ totalNumero + ") en total, muchos"
         alert2.className ="";
         alert2.innerHTML = "";
     }
