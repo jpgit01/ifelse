@@ -16,6 +16,15 @@ function bordeRojo() {
     let git= document.getElementById("git").value;
     let slack= document.getElementById("slack").value;
     let github= document.getElementById("github").value;
+
+    if(parseInt(git) <= 0){
+        git = 0
+        } else if(parseInt(slack) <= 0){
+            slack = 0
+            }else if(parseInt(github) <= 0){
+                github = 0
+                }
+
     let total = parseInt(git) + parseInt(slack)  + parseInt(github);
     totalNumero = Number(total);
     let alert = document.getElementById("alert");
@@ -23,10 +32,10 @@ function bordeRojo() {
     if (totalNumero <= 10 && totalNumero > 0){
         
         alert.className ="alert alert-success"
-        alert.innerHTML = "Llevas " + total + " Stickers"
+        alert.innerHTML = "Llevas " + total + " Stickers en total"
     }else if(totalNumero > 10){
         alert.className ="alert alert-danger"
-        alert.innerHTML = "Llevas demasiados Stickers"
+        alert.innerHTML = "Llevas demasiados Stickers ("+ totalNumero + ")"
     } else{
         alert.className ="alert alert-warning"
         alert.innerHTML = "Ingresa una cantidad correcta de Stickers"       
