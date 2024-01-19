@@ -17,16 +17,19 @@ function bordeRojo() {
     let slack= document.getElementById("slack").value;
     let github= document.getElementById("github").value;
     let total = parseInt(git) + parseInt(slack)  + parseInt(github);
-
+    totalNumero = Number(total);
     let alert = document.getElementById("alert");
 
-    if (total <= 10){
+    if (totalNumero <= 10 && totalNumero > 0){
         
         alert.className ="alert alert-success"
         alert.innerHTML = "Llevas " + total + " Stickers"
-    } else{
+    }else if(totalNumero > 10){
         alert.className ="alert alert-danger"
         alert.innerHTML = "Llevas demasiados Stickers"
+    } else{
+        alert.className ="alert alert-warning"
+        alert.innerHTML = "Ingresa una cantidad correcta de Stickers"       
     }
   }
 
