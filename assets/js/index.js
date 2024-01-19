@@ -1,7 +1,5 @@
 bandera = 0;
-
 function bordeRojo() {
-   
     if (bandera == 0){
         document.getElementById("uno").
         className = "borderojo img-fluid";
